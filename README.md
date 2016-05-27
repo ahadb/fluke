@@ -10,7 +10,7 @@ A multi-purpose library that generates random strings, sentences, numbers, softw
 
 You can use Fluke JS in Node or in the browser:
 
-`var fluke = new Fluke`
+`var fluke = new Fluke()`
 
 `<script src = "fluke.min.js"></script>`
 
