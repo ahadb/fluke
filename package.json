@@ -1,7 +1,7 @@
 {
   "name": "flukejs",
   "version": "0.0.1",
-  "description": "random stuff",
+  "description": "A multi-purpose library that generates random strings, sentences, numbers, software languages and lot's of other things",
   "main": "dist/fluke.js",
   "scripts": {
     "test": "gulp",
@@ -54,8 +54,5 @@
   "babelBoilerplateOptions": {
     "entryFileName": "fluke.js",
     "mainVarName": ""
-  },
-  "dependencies": {
-    "an-array-of-english-words": "^1.0.1"
   }
 }

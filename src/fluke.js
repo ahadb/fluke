@@ -16,13 +16,11 @@
 
   }
 
-  function testRange(test, errorMessage) {
+  function testFluke(test, errorMessage) {
     if (test) {
       throw new Error(errorMessage);
     }
   }
-
-  Fluke.prototype.version = '0.0.1';
 
   // define some constants
   const maxNum      = Number.MAX_SAFE_INTEGER;
@@ -32,7 +30,9 @@
   const numbers     = '01234556789';
 
   // helper functions
+  // @todo: options, defaults
 
+  Fluke.prototype.version = '0.0.1';
 
 
   // Fundamentals
@@ -57,7 +57,7 @@
     }
   };
 
-  /**
+  /** ==> Boolean
    *  Return a random bool
    *
    *  @param {}
@@ -70,7 +70,7 @@
     return randomNum;
   };
 
-  /**
+  /** ==> Character
    *  Return a random character
    *
    *  @param {}
@@ -86,7 +86,7 @@
 
   };
 
-  /**
+  /** ==> Integer
    *  Return a random integer
    *
    *  @param {min}
@@ -106,7 +106,7 @@
 
   };
 
-  /**
+  /** ==> String
    *  Return a random string
    *
    *  @throws {Error}
@@ -130,7 +130,7 @@
   // Technology
   // ---------------
 
-  /**
+  /** ==> Programming languge
    *  Return a random programming language
    *  @throws {Error}
    *  @returns {string}
@@ -146,7 +146,7 @@
 
   };
 
-  /**
+  /** ==> Domains
    *  Return random top level domains
    *  @throws {Error}
    *  @returns {string}
@@ -156,7 +156,7 @@
 
   };
 
-  /**
+  /** ==> File Extensions
    *  Return random file extensions
    *  @throws {Error}
    *  @returns {string}
@@ -175,7 +175,7 @@
   // Text
   // ---------------
 
-  /**
+  /** ==> Lorem Ipsum
    *  Return random lorem ipsum
    *  @throws {Error}
    *  @returns {long string}
@@ -205,7 +205,7 @@
 
   };
 
-  /**
+  /** ==> Capitalized Word
    *  Return a word capitalized
    *  @param {string}
    *  @throws {Error}
@@ -216,9 +216,9 @@
     return word.charAt(0).toUpperCase() + word.substr(1);
   };
 
-  /**
+  /** ==> Word
    *  Return a word
-   *  *  @param {string}
+   *  @param {string}
    *  @throws {Error}
    *  @returns {String}
    */
@@ -260,6 +260,8 @@
     }
   };
 
+  // data
+
   var data = {
     fNames: {
 
@@ -288,13 +290,20 @@
   };
 
 
+  // On window
+  if (typeof window === 'object' && typeof window.document === 'object') {
+    window.Fluke = Fluke;
+    window.fluke = new Fluke();
+
+  }
+
   // CommonJS module
-  //if (typeof exports !== 'undefined') {
-  //  if (typeof module !== 'undefined' && module.exports) {
-  //    exports = module.exports = Fluke;
-  //  }
-  //  exports.Chance = Fluke;
-  //}
+  if (typeof exports !== 'undefined') {
+    if (typeof module !== 'undefined' && module.exports) {
+      exports = module.exports = Fluke;
+    }
+    exports.Fluke = Fluke;
+  }
 
   // Register as an anonymous AMD module
   if (typeof define === 'function' && define.amd) {
@@ -303,9 +312,4 @@
     });
   }
 
-  if (typeof window === 'object' && typeof window.document === 'object') {
-    window.Fluke = Fluke;
-    window.fluke = new Fluke();
-
-  }
 })();
