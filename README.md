@@ -12,7 +12,7 @@ You can use Fluke JS in Node or in the browser:
 
 `var fluke = new Fluke`
 
-`<script src = "fluke.min.js"></script>
+`<script src = "fluke.min.js"></script>`
 
 
 ## Installation
