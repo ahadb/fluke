@@ -168,6 +168,12 @@
 
   };
 
+  Fluke.prototype.avatar = function() {
+
+  };
+
+
+
   // End Technology
   // <-------------
 
@@ -260,8 +266,10 @@
     }
   };
 
-  // data
+  // End Text
+  // <---------------
 
+  // data
   var data = {
     fNames: {
 
@@ -290,11 +298,35 @@
   };
 
 
+  // Person
+  // ---------------
+
+
+  // Location
+  // -------------
+
+
+  // JSON
+  // -----------
+
+
+  // Currency
+  // -----------
+
+
+
   // On window
   if (typeof window === 'object' && typeof window.document === 'object') {
     window.Fluke = Fluke;
     window.fluke = new Fluke();
 
+  }
+
+  // Register as an anonymous AMD module
+  if (typeof define === 'function' && define.amd) {
+    define([], function () {
+      return Fluke;
+    });
   }
 
   // CommonJS module
@@ -305,11 +337,5 @@
     exports.Fluke = Fluke;
   }
 
-  // Register as an anonymous AMD module
-  if (typeof define === 'function' && define.amd) {
-    define([], function () {
-      return Fluke;
-    });
-  }
 
 })();
