@@ -23,11 +23,15 @@
   }
 
   // define some constants
-  const maxNum      = Number.MAX_SAFE_INTEGER;
-  const minNum      = Number.MIN_SAFE_INTEGER;
-  const alpha_lower = 'abcdefghijklymnopqrstuvwxyz';
-  const alpha_upper = alpha_lower.toUpperCase();
-  const numbers     = '01234556789';
+  const maxNum       = Number.MAX_SAFE_INTEGER;
+  const minNum       = Number.MIN_SAFE_INTEGER;
+  const alpha_lower  = 'abcdefghijklymnopqrstuvwxyz';
+  const alpha_upper  = alpha_lower.toUpperCase();
+  const numbers      = '01234556789';
+  const dollarSign   = '$';
+  const euroSign     = '€';
+  const russianSign  = '₽';
+  const britishSign  = '£';
 
   // helper functions
   // @todo: options, defaults
@@ -313,7 +317,91 @@
   // Currency
   // -----------
 
+  /** ==> Dollar
+   *  Return a word
+   *  @param {number}
+   *  @param {number}
+   *  @throws {Error}
+   *  @returns {number}
+   */
 
+  Fluke.prototype.dollar = function(min, max) {
+    let finAlgorithm = this.random() * (max - min) + min;
+
+    if (arguments.length > 0) {
+      return dollarSign + '' + finAlgorithm.toFixed(2);
+    }
+
+    else {
+      throw new Error('min and max should be supplied');
+    }
+
+  };
+
+
+  /** ==> Ruble
+   *  Return a word
+   *  @param {number}
+   *  @param {number}
+   *  @throws {Error}
+   *  @returns {number}
+   */
+
+  Fluke.prototype.ruble = function(min, max) {
+    let finAlgorithm = this.random() * (max - min) + min;
+
+    if (arguments.length > 0) {
+      return russianSign + '' + finAlgorithm.toFixed(2);
+    }
+
+    else {
+      throw new Error('min and max should be supplied');
+    }
+
+  };
+
+  /** ==> Euro
+   *  Return a word
+   *  @param {number}
+   *  @param {number}
+   *  @throws {Error}
+   *  @returns {number}
+   */
+
+  Fluke.prototype.euro = function(min, max) {
+    let finAlgorithm = this.random() * (max - min) + min;
+
+    if (arguments.length > 0) {
+      return euroSign + '' + finAlgorithm.toFixed(2);
+    }
+
+    else {
+      throw new Error('min and max should be supplied');
+    }
+
+  };
+
+
+  /** ==> British Pound
+   *  Return a word
+   *  @param {number}
+   *  @param {number}
+   *  @throws {Error}
+   *  @returns {number}
+   */
+
+  Fluke.prototype.pound = function(min, max) {
+    let finAlgorithm = this.random() * (max - min) + min;
+
+    if (arguments.length > 0) {
+      return britishSign + '' + finAlgorithm.toFixed(2);
+    }
+
+    else {
+      throw new Error('min and max should be supplied');
+    }
+
+  };
 
   // On window
   if (typeof window === 'object' && typeof window.document === 'object') {
