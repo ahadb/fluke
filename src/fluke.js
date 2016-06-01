@@ -16,6 +16,8 @@
 
   }
 
+  Fluke.prototype.version = '0.0.1';
+
   function testFluke(test, errorMessage) {
     if (test) {
       throw new Error(errorMessage);
@@ -28,15 +30,16 @@
   const alpha_lower  = 'abcdefghijklymnopqrstuvwxyz';
   const alpha_upper  = alpha_lower.toUpperCase();
   const numbers      = '01234556789';
-  const dollarSign   = '$';
-  const euroSign     = '€';
-  const russianSign  = '₽';
-  const britishSign  = '£';
+  const dollarCurr   = '$';
+  const euroCurr     = '€';
+  const russianCurr  = '₽';
+  const britishCurr  = '£';
+  const kuwaitiCurr  = 'د.ك ';
 
   // helper functions
   // @todo: options, defaults
 
-  Fluke.prototype.version = '0.0.1';
+
 
 
   // Fundamentals
@@ -329,7 +332,7 @@
     let finAlgorithm = this.random() * (max - min) + min;
 
     if (arguments.length > 0) {
-      return dollarSign + '' + finAlgorithm.toFixed(2);
+      return dollarCurr + '' + finAlgorithm.toFixed(2);
     }
 
     else {
@@ -351,7 +354,7 @@
     let finAlgorithm = this.random() * (max - min) + min;
 
     if (arguments.length > 0) {
-      return russianSign + '' + finAlgorithm.toFixed(2);
+      return russianCurr + '' + finAlgorithm.toFixed(2);
     }
 
     else {
@@ -372,7 +375,7 @@
     let finAlgorithm = this.random() * (max - min) + min;
 
     if (arguments.length > 0) {
-      return euroSign + '' + finAlgorithm.toFixed(2);
+      return euroCurr + '' + finAlgorithm.toFixed(2);
     }
 
     else {
@@ -394,11 +397,53 @@
     let finAlgorithm = this.random() * (max - min) + min;
 
     if (arguments.length > 0) {
-      return britishSign + '' + finAlgorithm.toFixed(2);
+      return britishCurr + '' + finAlgorithm.toFixed(2);
     }
 
     else {
       throw new Error('min and max should be supplied');
+    }
+
+  };
+
+  /** ==>  Kuwaiti Dinar
+   *  Return a word
+   *  @param {number}
+   *  @param {number}
+   *  @throws {Error}
+   *  @returns {number}
+   */
+
+  Fluke.prototype.kDinar = function(min, max) {
+    let finAlgorithm = this.random() * (max - min) + min;
+
+    if (arguments.length > 0) {
+      return kuwaitiCurr + '' + finAlgorithm.toFixed(2);
+    }
+
+    else {
+      throw new Error('min and max should be supplied');
+    }
+
+  };
+
+  Fluke.prototype.nasdaq100 = function(min, max) {
+
+    const rawNasdaq =
+      'ATVI,ADBE,AKAM,ALXN,GOOG,GOOGL,AMZN,AAL,AMGN,ADI,AAPL,AMAT,ADSK,ADP,BIDU,BBBY,BIIB,BMRN,AVGO,CA,CELG,CERN,CHTR,CHKP,CSCO,CTXS,CTSH,CMCSA,COST,CSX,CTRP,DISCA,DISCK,DISH,DLTR,EBAY,EA,ENDP,EXPE,ESRX,FB,FAST,FISV,GILD,HSIC,ILMN,INCY,INTC,INTU,ISRG,JD,LRC,LBTYA,LBTYK,LVNTA,QVCA,LMCA,LMCK,BATRA,BATRK,LLTC,MAR,MAT,MXIM,MU,MSFT,MDLZ,MNST,MYL,NTAP,NTES,NFLX,NCLH,NVDA,NXPI,ORLY,PCAR,PAYX,PYPL,QCOM,REGN,ROST,SBAC,STX,SIRI,SWKS,SBUX,SRCL,SYMC,TMUS,TSLA,TXN,KHC,PCLN,TSCO,TRIP,FOX,FOXA,ULTA,VRSK,VRTX,VIAB,VOD,WBA,WDC,WFM,XLNX,YHOO';
+
+    const nasdaq = rawNasdaq.split(',');
+
+    function nasdaqList() {
+      return nasdaq[randInt(nasdaq.length)];
+    }
+
+    function randInt() {
+      return Math.floor(Math.random() * 62);
+    }
+
+    if (typeof(options) === 'undefined') {
+      return nasdaqList();
     }
 
   };
