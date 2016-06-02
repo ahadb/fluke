@@ -288,7 +288,7 @@
   // End Text
   // <---------------
 
-  // data
+  // dataset, @todo: complete data set so fluke can randomize stuff
   var data = {
     forenames: {
 
@@ -568,7 +568,7 @@
   };
 
 
-  // Person
+  // Person / People
   // ---------------
 
   Fluke.prototype.nationality = function() {
@@ -773,9 +773,29 @@
 
   };
 
+  Fluke.prototype.arab = function() {
+
+  };
+
+  Fluke.prototype.forename = function() {
+
+  };
+
+  Fluke.prototype.surnname = function() {
+
+  };
+
+  Fluke.prototype.fullname = function() {
+
+  };
+
 
   // Location
   // -------------
+
+  Fluke.prototype.country = function() {
+
+  };
 
 
   // JSON
@@ -912,6 +932,9 @@
     }
 
   };
+
+  // helper functions that iterate over objects
+
 
   // On window
   if (typeof window === 'object' && typeof window.document === 'object') {
