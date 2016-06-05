@@ -934,7 +934,15 @@
   };
 
   // helper functions that iterate over objects
-
+  for (var property in object) {
+    if (object.hasOwnProperty(property)) {
+        // do stuff
+    }
+  }
+  
+  for (var key in data) {
+    console.log(data[key]);
+  }
 
   // On window
   if (typeof window === 'object' && typeof window.document === 'object') {
