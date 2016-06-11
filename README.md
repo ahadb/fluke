@@ -27,9 +27,16 @@ Browser: Build and add reference to your html:
 ## Usage
 
 * You can create a new instance of Fluke: `var myFluke = new Fluke` - all instances will inherit methods from the prototype.
- * /i.e: then in your code `myFluke.gender()` to get random genders
-* Fluke comes pre instantiated when in the browser environment. If you've added a reference to fluke.min in your head an instance of fluke will already be availble to you:
- * /i.e: you can then use `fluke.gender()`
+
+ ```
+ // then in your code:
+ myFluke.gender()
+ ```
+* Fluke comes pre instantiated when in the browser environment. If you've added a reference to fluke.min in your head an instance of fluke will already be availble to you
+
+ ``` // in your code
+ fluke.gender()
+ ```
 
 ## NPM Build Scripts / Installation
 
