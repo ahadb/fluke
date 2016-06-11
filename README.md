@@ -55,11 +55,21 @@ Note: fluke is not yet published on npm, it will be within the next couple of we
 
 ## API Reference
 
-Fluke has numerous methods that you can use to randomize stuff:
+Fluke has numerous methods that you can use to randomize stuff - categories include:
 
 #### Fundamentals
 
 #### Technology
+
+#### Text
+
+#### Finance
+
+#### People
+
+#### Location
+
+#### Currency
 
 ## Tests
 
