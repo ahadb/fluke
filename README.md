@@ -26,15 +26,15 @@ Browser: Build and add reference to your html:
 
 ## Usage
 
-* You can create a new instance of Fluke: `var myFluke = new Fluke` - all instances will inherit methods from the prototype.
+You can create a new instance of Fluke: `var myFluke = new Fluke` - all instances will inherit methods from the prototype.
 
- ```
+ ``` javascript
  // then in your code:
  myFluke.gender()
  ```
-* Fluke comes pre instantiated when in the browser environment. If you've added a reference to fluke.min in your head an instance of fluke will already be availble to you
+Fluke comes pre instantiated when in the browser environment. If you've added a reference to fluke.min in your head an instance of fluke will already be availble to you
 
- ```
+ ``` javascript
  // in your code
  fluke.gender()
  ```
@@ -55,7 +55,11 @@ Note: fluke is not yet published on npm, it will be within the next couple of we
 
 ## API Reference
 
-Coming...
+Fluke has numerous methods that you can use to randomize stuff:
+
+#### Fundamentals
+
+#### Technology
 
 ## Tests
 
