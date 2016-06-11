@@ -10,11 +10,12 @@ This lib is still work in progress.
 
 You can use Fluke JS in Node or in the browser:
 
-Require the library in node:
-`var fluke = require('fluke')`
+Node: Require the library in node:
+ * `npm install -g fluke
+ * `var fluke = require('fluke')`
 
-Build and add reference to your html:
-`<script src = "fluke.min.js"></script>`
+Browser: Build and add reference to your html:
+ * `<script src = "fluke.min.js"></script>`
 
 ## Usage
 
@@ -23,12 +24,15 @@ Build and add reference to your html:
 * Fluke comes pre instantiated when in the browser environment. If you've added a reference to fluke.min in your head an instance of fluke will already be availble to you:
  * /i.e: you can then use `fluke.gender()`
 
-## Build / Installation
+## NPM Build Scripts / Installation
 
 To install fluke simple use `npm`: `npm install -g flukejs`
 
+* npm install
 * npm run build
+* npm run tests
 * dist folder will contain your references
+
 
 @todo: 'npm install -g fluke`
 
