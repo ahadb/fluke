@@ -19,7 +19,7 @@ Build and add reference to your html:
 ## Usage
 
 * You can create a new instance of Fluke: `var myFluke = new Fluke` - all instances will inherit methods from the prototype.
- ** then in your code `myFluke.gender` to get random genders
+ * then in your code `myFluke.gender` to get random genders
 * Fluke comes pre instantiated when in the browser environment. If you've added
 
 
