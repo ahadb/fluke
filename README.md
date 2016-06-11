@@ -11,8 +11,11 @@ This lib is still work in progress.
 You can use Fluke JS in Node or in the browser:
 
 Node: Require the library in node:
- * `npm install -g fluke
- * `var fluke = require('fluke')`
+
+```
+npm install -g fluke
+var fluke = require('fluke')
+```
 
 Browser: Build and add reference to your html:
  * `<script src = "fluke.min.js"></script>`
@@ -32,9 +35,11 @@ To install fluke simple use `npm`: `npm install -g flukejs`
 * npm run build
 * npm run tests
 * dist folder will contain your references
+  * fluke.min,js
+  * flke.sourcemaps
 
 
-@todo: 'npm install -g fluke`
+Note: fluke is not yet published on npm, it will be within the next couple of weeks
 
 ## API Reference
 
@@ -42,7 +47,7 @@ Coming...
 
 ## Tests
 
-Mocha and Chai
+@todo: Mocha and Chai
 
 ## Contributors
 
