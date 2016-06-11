@@ -34,7 +34,8 @@ Browser: Build and add reference to your html:
  ```
 * Fluke comes pre instantiated when in the browser environment. If you've added a reference to fluke.min in your head an instance of fluke will already be availble to you
 
- ``` // in your code
+ ```
+ // in your code
  fluke.gender()
  ```
 
