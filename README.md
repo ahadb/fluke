@@ -12,14 +12,14 @@ You can use Fluke JS in Node or in the browser:
 
 Node: Download the pacakge and require the library:
 
-```
+``` javascript
 npm install -g fluke
 var fluke = require('fluke')
 ```
 
 Browser: Build and add reference to your html:
 
-```
+``` html
 <!-- install fluke script in head -->
 <script src = "fluke.min.js"></script>
 ```
