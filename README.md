@@ -4,13 +4,13 @@
 
 A multi-purpose library that generates random strings, sentences, numbers, software languages and lot's of other things.
 
-This lib is still work in progress.
+*This lib is still work in progress.*
 
 ## Environment
 
 You can use Fluke JS in Node or in the browser:
 
-Node: Require the library in node:
+Node: Download the pacakge and require the library:
 
 ```
 npm install -g fluke
@@ -18,7 +18,11 @@ var fluke = require('fluke')
 ```
 
 Browser: Build and add reference to your html:
- * `<script src = "fluke.min.js"></script>`
+
+```
+<!-- install fluke script in head -->
+<script src = "fluke.min.js"></script>
+```
 
 ## Usage
 
