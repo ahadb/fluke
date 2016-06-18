@@ -62,22 +62,38 @@ Fluke's API is easy to work with and in a basic form at the moment. Fluke has nu
 **Float:**
 
 
-> fluke.float(min, max);
+> fluke.floating(min, max);
 
 ```javascript
-fluke.float(10, 1000);
+fluke.floating(10, 1000);
 // => 722.6953696312755
 ```
 
-Bool:
+**Bool:**
 
-fluke.bool()
+> fluke.boolean()
 
 ```javascript
 fluke.bool();
 // => true
 ```
 
+**Integer:**
+
+> fluke.integer(min, max);
+
+```javascript
+fluke.integer(233, 500);
+// => 455
+```
+
+**String:**
+
+> fluke.string(s); // where s is the length of random string
+
+```javascript
+fluke.string(7);
+==> "VayYMTm"
 
 #### Technology
 
