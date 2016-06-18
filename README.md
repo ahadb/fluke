@@ -59,7 +59,7 @@ Fluke's API is easy to work with and in a basic form at the moment. Fluke has nu
 
 #### Fundamentals
 
-Float:
+**Float:**
 
 
 fluke.float(min, max);
