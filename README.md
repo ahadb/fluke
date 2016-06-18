@@ -55,9 +55,29 @@ Note: fluke is not yet published on npm, it will be within the next couple of we
 
 ## API Reference
 
-Fluke has numerous methods that you can use to randomize stuff - categories include:
+Fluke's API is easy to work with and in a basic form at the moment. Fluke has numerous methods that you can use to randomize stuff - categories include:
 
 #### Fundamentals
+
+Float:
+
+
+fluke.float(min, max);
+
+```javascript
+fluke.float(10, 1000);
+// => 722.6953696312755
+```
+
+Bool:
+
+fluke.bool()
+
+```javascript
+fluke.bool();
+// => true
+```
+
 
 #### Technology
 
