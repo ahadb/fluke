@@ -62,7 +62,7 @@ Fluke's API is easy to work with and in a basic form at the moment. Fluke has nu
 **Float:**
 
 
-fluke.float(min, max);
+*fluke.float(min, max);*
 
 ```javascript
 fluke.float(10, 1000);
