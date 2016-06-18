@@ -94,6 +94,7 @@ fluke.integer(233, 500);
 ```javascript
 fluke.string(7);
 ==> "VayYMTm"
+```
 
 #### Technology
 
